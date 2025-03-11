@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Card from "./Components/Card/Card";
+import CardList from "./Components/CardList/CardList";
 
 const App = () => {
   return (
   <div>
-    <Card />
+    <CardList />
 </div>
 );
 };
