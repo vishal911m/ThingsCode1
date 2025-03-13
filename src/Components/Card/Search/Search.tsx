@@ -1,4 +1,4 @@
-import React, { ChangeEvent, HtmlHTMLAttributes, JSX, SyntheticEvent, useState } from 'react'
+import React, { ChangeEvent, JSX, SyntheticEvent, useState } from 'react'
 
 type Props = {}
 
