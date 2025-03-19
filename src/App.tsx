@@ -33,6 +33,7 @@ const App = () => {
   <div>
     <Search onClick={onClick} search={search} handleChange={handleChange} />
     <CardList />
+    {serverError && <div>Unable to connect to API</div>}
 </div>
 );
 };
