@@ -19,6 +19,7 @@
     "uuid": "^11.1.0"
   },
   "devDependencies": {
+    "@parcel/transformer-react-refresh-wrap": "^2.14.1",
     "@types/axios": "^0.14.4",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
