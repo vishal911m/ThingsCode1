@@ -29,6 +29,14 @@ const App = () => {
     setPortfolioValues(updatedPortfolio);
   }
 
+  const onPortfolioDelete = (e: any) => {
+    e.preventDefault();
+    const removed = portfolioValues.filter((value) => {
+      return value !== e.target[0].value;
+    });
+    setPortfolioValues(removed);
+  };
+
   const onClick = async (e: SyntheticEvent)=>{
     // console.log(e);
     e.preventDefault();
@@ -42,10 +50,13 @@ const App = () => {
     // console.log("Search Result: ", searchResult);
   }
 
+  console.log("App.tsx onPortfolioDelete function:", onPortfolioDelete);
+
+
   return (
   <div>
     <Search onClick={onClick} search={search} handleChange={handleChange} />
-    <ListPortfolio portfolioValues={portfolioValues}/>
+    <ListPortfolio portfolioValues={portfolioValues} onPortfolioDelete={onPortfolioDelete} />
     <CardList searchResults={searchResult} onPortfolioCreate={onPortfolioCreate} />
     {serverError && <div>Unable to connect to API</div>}
 </div>
