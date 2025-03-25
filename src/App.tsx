@@ -6,6 +6,9 @@ import Search from "./Components/Search/Search";
 import { CompanySearch } from "./company";
 import ListPortfolio from "./Components/Portfolio/ListPortfolio/ListPortfolio";
 import AddPortfolio from "./Components/Portfolio/AddPortfolio/AddPortfolio";
+import Navbar from "./Components/Navbar/Navbar";
+import Hero from "./Components/Hero/Hero";
+import "../src/index.css";
 
 const App = () => {
   // console.log(searchCompanies("aapl"));
@@ -55,6 +58,7 @@ const App = () => {
 
   return (
   <div>
+    <Navbar />
     <Search onClick={onClick} search={search} handleChange={handleChange} />
     <ListPortfolio portfolioValues={portfolioValues} onPortfolioDelete={onPortfolioDelete} />
     <CardList searchResults={searchResult} onPortfolioCreate={onPortfolioCreate} />
